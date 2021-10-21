@@ -1,7 +1,17 @@
 .App {
+  
   text-align: center;
+  background: #282C34;
+  height: 100vh;
 }
-
+.Wrapper{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

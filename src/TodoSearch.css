@@ -1,0 +1,16 @@
+.TodoSearch{
+    
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    height: 30px;
+    opacity: .8;
+    transition: .2s transform;
+    transform: scale(1);
+    font-family: 'Fira Code', monospace;
+    background: #24385B;
+}
+.TodoSearch:hover{
+    transform: scale(1.1);
+}
