@@ -10,7 +10,9 @@
     transform: scale(1);
     font-family: 'Fira Code', monospace;
     background: #24385B;
+    color: white;
+    margin-bottom: 1px;
 }
-.TodoSearch:hover{
+/* .TodoSearch:hover{
     transform: scale(1.1);
-}
+} */
