@@ -2,5 +2,13 @@ import React from "react";
 import "./CreateTodoButton.css";
 import logo from "./close.png";
 export function CreateTodoButton() {
-  return <button className="CreateTodoButton"><img src={logo}></img></button>;
+  const onClickButton = (msg) => {
+    alert(msg);
+  }
+  return <button 
+  className="CreateTodoButton"
+  onClick={() => onClickButton('Esto deberia ser un modal')}>
+    <img src={logo} alt="Imagen perrona"></img>
+    
+  </button>;
 }
