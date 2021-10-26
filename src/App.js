@@ -20,6 +20,25 @@ function App() {
 
   const completedTodos = todos.filter(todo => todo.completed).length;
   const totalTodos = todos.length;
+
+  const completeTodo = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text == text);
+
+    const newTodos = [...todos];
+
+    newTodos[todoIndex].completed === true ? 
+    newTodos[todoIndex].completed = false :
+    newTodos[todoIndex].completed = true
+    setTodos(newTodos);
+  };
+  const deleteTodo = (text) => {
+    const todoIndex = todos.findIndex(todo => todo.text == text);
+
+    const newTodos = [...todos];
+
+    newTodos.splice(todoIndex,1);
+    setTodos(newTodos);
+  };
   return (
     <div className="App">
       <div className="Wrapper">
@@ -35,7 +54,12 @@ function App() {
 
           <TodoList>
             {filterTodos.map((item,i) => (
-              <TodoItem key={i} {...item} />
+              <TodoItem 
+              key={i} 
+              {...item}
+              onComplete={() => completeTodo(item.text)}
+              onDelete={() => deleteTodo(item.text)}
+               />
             ))}
           </TodoList>
           <CreateTodoButton />
