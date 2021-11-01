@@ -1,9 +1,6 @@
 import React from "react";
 import "./TodoItem.css";
 export function TodoItem(props) {
-  const onDelete = () => {
-    alert(`Borraste el todo ${props.text}`) 
-  }
   return (
     <li className="TodoItem">
       <span 
