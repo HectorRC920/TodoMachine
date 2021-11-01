@@ -1,6 +1,6 @@
 import React from "react";
 import "./CreateTodoButton.css";
-import logo from "./close.png";
+import logo from "../close.png";
 export function CreateTodoButton() {
   const onClickButton = (msg) => {
     alert(msg);
