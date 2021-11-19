@@ -1,4 +1,5 @@
 import React from "react";
+import { TodoContext } from "../TodoContext";
 import "./TodoSearch.css";
 //Asi se manejaba el estado en el pasado
 // class Componente extends React.Component{
@@ -14,9 +15,9 @@ import "./TodoSearch.css";
 //     )
 //   }
 // }
-export function TodoSearch({ searchValue, setSeachValue }) {
+export function TodoSearch() {
   
-
+  const { searchValue, setSeachValue } = React.useContext(TodoContext);
   const onSearchValueChange = (event) => {
     setSeachValue(event.target.value);
   };
