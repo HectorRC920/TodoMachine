@@ -11,6 +11,7 @@
     cursor: pointer;
     transform: rotate(0);
     transition: .3s transform;
+    /* z-index: 1; */
 }
 .CreateTodoButton:hover{
     transform:  rotate(224deg);

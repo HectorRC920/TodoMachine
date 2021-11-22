@@ -1,0 +1,49 @@
+form {
+  font-family: "Fira Code", monospace;
+  width: 90%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background: white;
+}
+button {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  border-radius: 15%;
+}
+button:hover {
+  box-shadow: -1px 1px 20px -6px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: -1px 1px 20px -6px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: -1px 1px 20px -6px rgba(0, 0, 0, 0.8);
+}
+.onCancelButton {
+  background: transparent;
+  color: #282c34;
+}
+textarea {
+  width: 80%;
+  font-size: 15px;
+  max-width: inherit;
+  max-height: 100px;
+  text-align: center;
+  height: 50px;
+  font-family: "Montserrat";
+}
+
+textarea::placeholder {
+  color: #a5a5a5;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+label {
+  text-align: center;
+  color: black;
+  margin: 15px;
+  font-weight: bold;
+}
