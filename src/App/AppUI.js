@@ -6,7 +6,7 @@ import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../TodoContext";
 import { Modal } from "../Modal";
-import {TodoForm} from "../TodoForm";
+import { TodoForm } from "../TodoForm";
 import { EmptyTodos } from "../EmptyTodos";
 import { TodosLoading } from "../TodosLoading";
 import { TodosError } from "../TodosError";
@@ -29,9 +29,10 @@ function AppUI() {
           <TodoSearch />
 
           <TodoList>
-            {error && <TodosError error={error}/>}
-            {loading && <TodosLoading/>}
-            {!loading && !filterTodos.length && <EmptyTodos/>}
+            {error && <TodosError error={error} />}
+            {loading &&
+              new Array(4).fill(1).map((a, i) => <TodosLoading key={i} />)}
+            {!loading && !filterTodos.length && <EmptyTodos />}
 
             {filterTodos.map((item, i) => (
               <TodoItem
@@ -42,13 +43,14 @@ function AppUI() {
               />
             ))}
           </TodoList>
-          {openModal ?
-          <Modal>
-            <TodoForm/>
-          </Modal> :
-          <div></div>
-          }
-          <CreateTodoButton/>
+          {openModal ? (
+            <Modal>
+              <TodoForm />
+            </Modal>
+          ) : (
+            <div></div>
+          )}
+          <CreateTodoButton />
         </React.Fragment>
       </div>
     </div>

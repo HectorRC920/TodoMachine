@@ -20,24 +20,22 @@
   height: 48px;
   width: 48px;
 }
-/* .LoadingTodo-completeIcon {
+.LoadingTodo-completeIcon {
   position: absolute;
   left: 12px;
+  bottom: 0;
 }
 .LoadingTodo-deleteIcon {
   position: absolute;
-  top: -24px;
   right: 0;
-} */
-.LoadingTodo-container,
-.LoadingTodo-completeIcon,
-.LoadingTodo-deleteIcon {
+}
+.LoadingTodo-container {
   background: linear-gradient(
     90deg,
     rgb(8, 101, 199),
     rgb(67, 50, 216)
   );
-  background-size: 100% 100%;
+  background-size: 400% 400%;
   animation: loadingAnimation 3s ease-in-out infinite;
 }
 
