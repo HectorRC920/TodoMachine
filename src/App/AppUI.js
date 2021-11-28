@@ -21,6 +21,7 @@ function AppUI() {
     openModal,
     setOpenModal,
   } = React.useContext(TodoContext);
+  
   return (
     <div className="App">
       <div className="Wrapper">
