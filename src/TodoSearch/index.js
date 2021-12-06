@@ -1,5 +1,4 @@
 import React from "react";
-import { TodoContext } from "../TodoContext";
 import "./TodoSearch.css";
 //Asi se manejaba el estado en el pasado
 // class Componente extends React.Component{
