@@ -15,9 +15,9 @@ import "./TodoSearch.css";
 //     )
 //   }
 // }
-export function TodoSearch() {
+export function TodoSearch({ searchValue, setSeachValue }) {
   
-  const { searchValue, setSeachValue } = React.useContext(TodoContext);
+  // const { searchValue, setSeachValue } = React.useContext(TodoContext);
   const onSearchValueChange = (event) => {
     setSeachValue(event.target.value);
   };
