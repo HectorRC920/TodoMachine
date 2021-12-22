@@ -43,13 +43,44 @@ function App() {
               setSeachValue={setSeachValue}
             />
           </TodoHeader>
-
-          <TodoList>
+          <TodoList
+            error={error}
+            loading={loading}
+            filterTodos={filterTodos}
+            totalTodos={totalTodos}
+            searchText={searchValue}
+            onError={() => <TodosError />}
+            onLoading={() => <TodosLoading />}
+            onEmptyTodos={() => <EmptyTodos />}
+            onEmptySearchResults={(searchText) => (
+              <p> No hay resultados para: {searchText}</p>
+            )}
+            // render={(todo) => (
+            //   <TodoItem
+            //     key={todo.text}
+            //     text={todo.text}
+            //     completed={todo.completed}
+            //     onComplete={() => completeTodo(todo.text)}
+            //     onDelete={() => deleteTodo(todo.text)}
+            //   />
+            // )}
+          >
+            {(todo) => (
+              <TodoItem
+                key={todo.text}
+                text={todo.text}
+                completed={todo.completed}
+                onComplete={() => completeTodo(todo.text)}
+                onDelete={() => deleteTodo(todo.text)}
+              />
+            )}
+          </TodoList>
+          {/* <TodoList>
             {error && <TodosError error={error} />}
             {loading &&
               new Array(4).fill(1).map((a, i) => <TodosLoading key={i} />)}
-            {!loading && !filterTodos.length && <EmptyTodos />}
-
+            {!loading && !totalTodos.length && <EmptyTodos />}
+            { (!loading && !filterTodos.length) && <p>No hay coincidencias</p> }
             {filterTodos.map((item, i) => (
               <TodoItem
                 key={i}
@@ -58,7 +89,7 @@ function App() {
                 onDelete={() => deleteTodo(item.text)}
               />
             ))}
-          </TodoList>
+          </TodoList> */}
           {openModal ? (
             <Modal>
               <TodoForm
