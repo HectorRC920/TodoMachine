@@ -16,3 +16,6 @@
 /* .TodoSearch:hover{
     transform: scale(1.1);
 } */
+.TodoSearch:disabled{
+    opacity: 50%;
+}

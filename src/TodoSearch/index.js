@@ -14,7 +14,7 @@ import "./TodoSearch.css";
 //     )
 //   }
 // }
-export function TodoSearch({ searchValue, setSeachValue }) {
+export function TodoSearch({ searchValue, setSeachValue , loading}) {
   
   // const { searchValue, setSeachValue } = React.useContext(TodoContext);
   const onSearchValueChange = (event) => {
@@ -27,6 +27,7 @@ export function TodoSearch({ searchValue, setSeachValue }) {
       className="TodoSearch"
       value={searchValue}
       onChange={onSearchValueChange}
+      disabled={!!loading}
     />
   );
 }

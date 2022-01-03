@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <div className="Wrapper">
         <React.Fragment>
-          <TodoHeader>
+          <TodoHeader loading={loading}>
             <TodoCounter
               completedTodos={completedTodos}
               totalTodos={totalTodos}
