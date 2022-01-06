@@ -5,9 +5,9 @@
     background: whitesmoke;
     color: green;
     margin: 0 auto;
-    position: relative;
-    right: -300px;
-    top: 0px;
+    position: absolute;
+    right: calc(100% - 85% );
+    top: calc(100% - 30%);
     cursor: pointer;
     transform: rotate(0);
     transition: .3s transform;

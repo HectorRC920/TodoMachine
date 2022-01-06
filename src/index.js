@@ -1,30 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App/index.js';
+import App from './App/index.js';
 
-function App(props) {
-  return(
-    <h1>{props.gretting}, {props.name}</h1>
-  );
-}
-
-function withSaludo(WrappedComponent){
-  return function WrappedComponentWithGretting(gretting) {
-    return function ComponenteDeVerdad(props){
-      return(
-        <React.Fragment>
-          <WrappedComponent {...props} gretting={gretting}  />
-          <p>Estamos a companando al WrappedComponent</p>
-        </React.Fragment>
-      );
-    }
-  }
-}
-const AppWithGretting = withSaludo(App)('Quiubole');
 ReactDOM.render(
-    // <App saludo='hola' nombre='juancalo'/>,
-    <AppWithGretting name='puto'/>,                                                                                 
+  <App />,                                                                                 
   document.getElementById('root'),
 );
 

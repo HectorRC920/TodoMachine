@@ -1,0 +1,18 @@
+.ChangeAlert-bg{
+    background-color: rgba(120, 139, 208, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ChangeAlert-content{
+    background-color: #24385B;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}

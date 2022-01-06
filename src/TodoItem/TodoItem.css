@@ -57,3 +57,6 @@
   .Icon-delete:hover {
     color: red;
   }
+  .TodoItem--loading{
+    display: none;
+  }

@@ -12,6 +12,7 @@ import { EmptyTodos } from "../EmptyTodos";
 import { TodosLoading } from "../TodosLoading";
 import { TodosError } from "../TodosError";
 import { TodoHeader } from "../TodoHeader";
+import {ChangeAlertWithStorageListener} from "../ChangeAlert";
 
 function App() {
   const {
@@ -27,6 +28,7 @@ function App() {
     totalTodos,
     searchValue,
     setSeachValue,
+    sincronizeTodos,
   } = useTodos();
 
   return (
@@ -69,6 +71,7 @@ function App() {
               <TodoItem
                 key={todo.text}
                 text={todo.text}
+                loading={loading}
                 completed={todo.completed}
                 onComplete={() => completeTodo(todo.text)}
                 onDelete={() => deleteTodo(todo.text)}
@@ -102,6 +105,7 @@ function App() {
             <div></div>
           )}
           <CreateTodoButton openModal={openModal} setOpenModal={setOpenModal} />
+          <ChangeAlertWithStorageListener sincronizeTodos={sincronizeTodos} />
         </React.Fragment>
       </div>
     </div>
